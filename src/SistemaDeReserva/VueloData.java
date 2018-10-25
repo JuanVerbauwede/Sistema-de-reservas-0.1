@@ -40,7 +40,7 @@ public class VueloData {
             statement.setDate(3, Date.valueOf(vuelo.getSalida()));
             statement.setDate(4, Date.valueOf(vuelo.getLlegada()));
             statement.setString(5, vuelo.getAerolinea());
-            statement.setString(5, vuelo.getAeronave());
+            statement.setString(6, vuelo.getAeronave());
            
             statement.executeUpdate();
             

@@ -21,6 +21,7 @@ public class Vuelo {
     private LocalDate llegada;
     private String aerolinea;
     private String aeronave;
+    private String estado="a tiempo";
 
     public Vuelo(int id_ciudadOrigen, int id_ciudadDestino, LocalDate salida, LocalDate llegada, String aerolinea, String aeronave) {
         this.id_ciudadOrigen = id_ciudadOrigen;
@@ -29,6 +30,7 @@ public class Vuelo {
         this.llegada = llegada;
         this.aerolinea = aerolinea;
         this.aeronave = aeronave;
+       
     }
 
     Vuelo() {
@@ -90,4 +92,13 @@ public class Vuelo {
     public void setAeronave(String aeronave) {
         this.aeronave = aeronave;
     }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    
 }
