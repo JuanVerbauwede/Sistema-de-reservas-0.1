@@ -18,6 +18,13 @@ public class Ciudad {
         this.nombreCiudad = nombreCiudad;
         this.nombrePais = nombrePais;
     }
+    
+     public Ciudad(int id_ciudad, String nombreCiudad, String nombrePais) {
+        this.id_ciudad = id_ciudad;
+        this.nombreCiudad = nombreCiudad;
+        this.nombrePais = nombrePais;
+    }
+    
 
     Ciudad() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

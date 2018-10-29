@@ -23,14 +23,33 @@ public class Vuelo {
     private String aeronave;
     private String estado="a tiempo";
 
-    public Vuelo(int id_ciudadOrigen, int id_ciudadDestino, LocalDate salida, LocalDate llegada, String aerolinea, String aeronave) {
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    
+    public Vuelo(int id_ciudadOrigen, int id_ciudadDestino, LocalDate salida, LocalDate llegada, String aerolinea,
+            String aeronave) {
         this.id_ciudadOrigen = id_ciudadOrigen;
         this.id_ciudadDestino = id_ciudadDestino;
         this.salida = salida;
         this.llegada = llegada;
         this.aerolinea = aerolinea;
         this.aeronave = aeronave;
-       
+    }
+    public Vuelo(int id_vueloNro, int id_ciudadOrigen, int id_ciudadDestino, LocalDate salida, LocalDate llegada, 
+            String aerolinea, String aeronave, String estado) {
+        this.id_vueloNro = id_vueloNro;
+        this.id_ciudadOrigen = id_ciudadOrigen;
+        this.id_ciudadDestino = id_ciudadDestino;
+        this.salida = salida;
+        this.llegada = llegada;
+        this.aerolinea = aerolinea;
+        this.aeronave = aeronave;
+        this.estado = estado;
     }
 
     Vuelo() {
@@ -92,13 +111,4 @@ public class Vuelo {
     public void setAeronave(String aeronave) {
         this.aeronave = aeronave;
     }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-    
 }

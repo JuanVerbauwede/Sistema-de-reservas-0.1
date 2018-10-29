@@ -82,7 +82,7 @@ public class CiudadData {
     public void borrarCiudad(int id){
     try {
             
-            String sql = "DELETE FROM ciudad WHERE id =?;";
+            String sql = "DELETE FROM ciudad WHERE id_ciudad =?;";
 
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             statement.setInt(1, id);
@@ -104,11 +104,12 @@ public class CiudadData {
     
         try {
             
-            String sql = "UPDATE ciudad SET nombreCiudad = ?, nombrePais = ?, WHERE id = ?;";
+            String sql = "UPDATE ciudad SET nombreCiudad = ?, nombrePais = ? WHERE id_ciudad = ?;";
 
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, ciudad.getNombreCiudad());
             statement.setString(2, ciudad.getNombrePais());
+            statement.setInt(3, ciudad.getId_ciudad());
            
             statement.executeUpdate();
             
@@ -116,7 +117,7 @@ public class CiudadData {
             statement.close();
     
         } catch (SQLException ex) {
-            System.out.println("Error al insertar un ciudad: " + ex.getMessage());
+            System.out.println("Error al actualizar una ciudad: " + ex.getMessage());
         }
     
     }
@@ -149,7 +150,7 @@ public class CiudadData {
             
     
         } catch (SQLException ex) {
-            System.out.println("Error al buscar un cliente: " + ex.getMessage());
+            System.out.println("Error al buscar una ciudad: " + ex.getMessage());
         }
         
         return ciudad;

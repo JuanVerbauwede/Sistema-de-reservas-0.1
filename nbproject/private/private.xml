@@ -3,11 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/Sistema%20de%20reservas%200.1/src/SistemaDeReserva/TestMain.java</file>
-            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/Sistema%20de%20reservas%200.1/src/SistemaDeReserva/Ciudad.java</file>
-            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/Sistema%20de%20reservas%200.1/src/SistemaDeReserva/VueloData.java</file>
-            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/Sistema%20de%20reservas%200.1/src/SistemaDeReserva/Conexion.java</file>
-            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/Sistema%20de%20reservas%200.1/src/SistemaDeReserva/CiudadData.java</file>
+            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/SistemaDeReserva2/src/SistemaDeReserva/Vistas/ABMCiudades.java</file>
+            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/SistemaDeReserva2/src/SistemaDeReserva/Ciudad.java</file>
+            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/SistemaDeReserva2/src/SistemaDeReserva/CiudadData.java</file>
+            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/SistemaDeReserva2/src/SistemaDeReserva/Vuelo.java</file>
+            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/SistemaDeReserva2/src/SistemaDeReserva/Vistas/ABMClientes.java</file>
+            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/SistemaDeReserva2/src/SistemaDeReserva/Conexion.java</file>
+            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/SistemaDeReserva2/src/SistemaDeReserva/ClienteData.java</file>
+            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/SistemaDeReserva2/src/SistemaDeReserva/Cliente.java</file>
+            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/SistemaDeReserva2/src/SistemaDeReserva/Vistas/PrincipalReserva.java</file>
+            <file>file:/C:/Users/juanv/Documents/NetBeansProjects/SistemaDeReserva2/src/SistemaDeReserva/Vistas/ABMVuelos.java</file>
         </group>
     </open-files>
 </project-private>

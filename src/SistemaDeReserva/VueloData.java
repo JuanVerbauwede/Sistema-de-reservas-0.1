@@ -115,7 +115,8 @@ public class VueloData {
     
         try {
             
-            String sql = "UPDATE vuelo SET id_ciudadOrigen = ?, id_ciudadDestino = ?, salida = ?, llegada = ?, aerolinea = ?, aeronave = ?  WHERE id = ?;";
+            String sql = "UPDATE vuelo SET id_ciudadOrigen = ?, id_ciudadDestino = ?, salida = ?, llegada = ?, "
+                    + "aerolinea = ?, aeronave = ?, estado = ?  WHERE id_vueloNro = ?;";
 
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             statement.setInt(1, vuelo.getId_ciudadOrigen());
@@ -124,6 +125,8 @@ public class VueloData {
             statement.setDate(4, Date.valueOf(vuelo.getLlegada()));
             statement.setString(5, vuelo.getAerolinea());
             statement.setString(6, vuelo.getAeronave());
+            statement.setString(7, vuelo.getEstado());
+            statement.setInt(8, vuelo.getId_vueloNro());
             statement.executeUpdate();
             
           

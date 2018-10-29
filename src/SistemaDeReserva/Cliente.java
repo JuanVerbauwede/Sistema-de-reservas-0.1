@@ -11,7 +11,7 @@ package SistemaDeReserva;
  */
 public class Cliente {
     private int id_cliente = -1;
-    private int pasaporte;
+    private String pasaporte;
     private String apellido;
     private String nombre;
     private String numeroTarjeta;
@@ -23,7 +23,7 @@ public class Cliente {
     
     
     
-    public Cliente(int pasaporte, String apellido, String nombre, String numeroTarjeta, String email) {
+    public Cliente(String pasaporte, String apellido, String nombre, String numeroTarjeta, String email) {
         this.pasaporte = pasaporte;
         this.apellido = apellido;
         this.nombre = nombre;
@@ -32,7 +32,7 @@ public class Cliente {
     }
 
     
-    public Cliente(int id_cliente, int pasaporte, String apellido, String nombre, String numeroTarjeta, String email) {
+    public Cliente(int id_cliente, String pasaporte, String apellido, String nombre, String numeroTarjeta, String email) {
         this.id_cliente = id_cliente;
         this.pasaporte = pasaporte;
         this.apellido = apellido;
@@ -49,11 +49,11 @@ public class Cliente {
         this.id_cliente = id_cliente;
     }
     
-    public int getPasaporte() {
+    public String getPasaporte() {
         return pasaporte;
     }
 
-    public void setPasaporte(int pasaporte) {
+    public void setPasaporte(String pasaporte) {
         this.pasaporte = pasaporte;
     }
 

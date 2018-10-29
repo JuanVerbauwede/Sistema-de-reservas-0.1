@@ -36,7 +36,7 @@ public class ClienteData {
             String sql = "INSERT INTO cliente ( pasaporte, apellido, nombre, numeroTarjeta, email) VALUES ( ?, ? , ? , ? , ? );";
 
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            statement.setInt(1, cliente.getPasaporte());
+            statement.setString(1, cliente.getPasaporte());
             statement.setString(2, cliente.getApellido());
             statement.setString(3, cliente.getNombre());
             statement.setString(4, cliente.getNumeroTarjeta());
@@ -70,7 +70,7 @@ public class ClienteData {
             while(resultSet.next()){
                 cliente = new Cliente();
                 cliente.setId_cliente(resultSet.getInt("id_cliente"));
-                cliente.setPasaporte(resultSet.getInt("pasaporte"));
+                cliente.setPasaporte(resultSet.getString("pasaporte"));
                 cliente.setApellido(resultSet.getString("apellido"));
                 cliente.setNombre(resultSet.getString("nombre"));
                 cliente.setNumeroTarjeta(resultSet.getString("numeroTarjeta"));
@@ -92,7 +92,7 @@ public class ClienteData {
     public void borrarCliente(int id){
     try {
             
-            String sql = "DELETE FROM cliente WHERE id =?;";
+            String sql = "DELETE FROM cliente WHERE id_cliente =?;";
 
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             statement.setInt(1, id);
@@ -115,14 +115,15 @@ public class ClienteData {
         try {
             
             String sql = "UPDATE cliente SET pasaporte = ?, apellido = ?, nombre = ? , numeroTarjeta =?,"
-                    + "email=? WHERE id = ?;";
+                    + "email=? WHERE id_cliente = ?;";
 
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            statement.setInt(1, cliente.getPasaporte());
+            statement.setString(1, cliente.getPasaporte());
             statement.setString(2, cliente.getApellido());
             statement.setString(3, cliente.getNombre());
             statement.setString(4, cliente.getNumeroTarjeta());
             statement.setString(5, cliente.getEmail());
+            statement.setInt(6, cliente.getId_cliente());
             statement.executeUpdate();
             
           
@@ -149,7 +150,7 @@ public class ClienteData {
             while(resultSet.next()){
                 cliente = new Cliente();
                 cliente.setId_cliente(resultSet.getInt("id_cliente"));
-                cliente.setPasaporte(resultSet.getInt("pasaporte"));
+                cliente.setPasaporte(resultSet.getString("pasaporte"));
                 cliente.setApellido(resultSet.getString("apellido"));
                 cliente.setNombre(resultSet.getString("nombre"));
                 cliente.setNumeroTarjeta(resultSet.getString("numeroTarjeta"));
